@@ -1,0 +1,47 @@
+/*
+	CSS file for AnthonyMai.me
+	Created by: Anthony Mai
+*/
+@import url("fontawesome-all.css");
+
+body {
+	background-image: url(images/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#wrapper {
+	width: auto;
+}
+
+#nav {
+	text-align: center;
+	margin-top: 5%;
+}
+
+.fab, .fas {
+	opacity: 0.55;
+	color: white;
+	font-size: 2em;
+}
+
+#nav a {
+	width: 5%;
+	display: inline-block;
+}
+
+#nav a:hover {
+	text-decoration: none;
+	opacity: 1;
+	color: white;
+}
+
+#nav .currentPage {
+	text-decoration: none;
+	opacity: 1;
+	color: white;
+}
+
+.tooltip {
+	margin: 5px;
+}
