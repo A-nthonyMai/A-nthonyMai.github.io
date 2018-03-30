@@ -1,1 +1,79 @@
-"Hello World" 
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="stylesheet" href="css/jBox.css"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+
+    <title>Anthony Mai | Portfolio</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav id="nav">
+        <a id="about" href="#about" class="fas fa-home" data-toggle="tooltip" data-placement="top" title="About Me"></a>
+        <a id="resume" href="#resume" class="fas fa-file" data-toggle="tooltip" data-placement="top" title="Resume"></a>
+        <a id="github" href="https://github.com/A-nthonyMai" class="fab fa-github" data-toggle="tooltip" data-placement="top" title="GitHub"></a>
+        <a id="linkedin" href="https://LinkedIn.com/in/A-nthonyMai" class="fab fa-linkedin-in" data-toggle="tooltip" data-placement="top" title="LinkedIn"></a>
+        <a id="email" href="mailto:anthony.mai@hotmail.com" class="fas fa-envelope active" data-toggle="tooltip" data-placement="top" title="Contact Me"></a>
+      </nav>
+
+      <section id="about">
+      </section>
+
+      <section id="about">
+      </section>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        // Highlight navigation button corresponding to current page
+      function setCurrentPage() {
+        var pageName = window.location.hash.substr(1);
+
+        if (pageName == "")
+        {
+          pageName = "about";
+        }
+        
+        document.getElementById(pageName).classList.add("currentPage");
+
+        var navButtons = document.getElementById("nav").getElementsByTagName("a");
+        for (var i = 0; i < navButtons.length; i++)
+        {
+          if (navButtons[i].classList.contains("currentPage") && navButtons[i].id != pageName)
+          {
+            navButtons[i].classList.remove("currentPage");
+          }
+        }
+      }
+
+        // Tooltip for navigation buttons
+      $(document).ready(function(){
+          setCurrentPage(this);
+
+          $('[data-toggle="tooltip"]').tooltip({
+            trigger : 'hover'
+          });
+      });
+
+      $(window).bind('hashchange', function() {
+        setCurrentPage();
+      });
+    </script>
+
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+  </body>
+</html>
