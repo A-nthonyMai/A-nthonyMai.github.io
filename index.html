@@ -2,61 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Materialize.css -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="css/Style.css" media="screen,projection"/>
 
     <title>Anthony Mai | Portfolio</title>
   </head>
   <body>
-    <div id="wrapper">
-      <nav id="nav">
-        <a id="about-button" href="#about">Home</a>
-        <a id="resume-button" href="#resume">Resume</a>
-        <a id="github-button" href="https://github.com/A-nthonyMai">GitHub</a>
-        <a id="linkedin-button" href="https://LinkedIn.com/in/A-nthonyMai">LinkedIn</a>
-        <a id="email-button" href="mailto:anthony.mai@hotmail.com">Contact Me</a>
-      </nav>
-
-      <div id="about">
-        <p id="aboutMe">
-          Hi, I'm <span class="name">Anthony Mai</span>. Software developer and recent Computer Science graduate from Melbourne, Australia.
-        </p>
+<!--     <nav class="blue lighten-5 right-align">
+      <a id="about-button" href="#about">Home</a>
+      <a id="resume-button" href="#resume">Resume</a>
+      <a id="contactMe-button" href="mailto:anthony.mai@hotmail.com">Contact Me</a>
+    </nav> -->
+    <header class="valign-wrapper">
+      <div class="row">
+      <div id="name" class="col s12 center-align">
+        <p class="flow-text ">Hi, I'm</p>
+        <h1>Anthony Mai</h1>
       </div>
+          
+      <div id="title" class="col s12 center-align">
+        <h3>Software and Web Developer</h3>
+      </div>
+    </header>
 
-      <div id="resume">
-          <section id="education">
-            <h2 class="line-bottom">EDUCATION</h2>
 
-            <p class="sectionStyle1">
-                <h3>Bachelor of Computer Science <span class="normalWeight">[Feb 2014 - Nov 2017]</span></h3>
-                <h4 class="normalWeight italics">Swinburne University of Technology</h4>
-                <p class="sectionStyle1">
-                  Key Study Areas:
-                  <ul>
-                    <li>Programming Languages and Methodology</li>
-                    <li>Software and Web Development</li>
-                    <li>Software Project Management</li>
-                    <li>Database Systems and Implementations</li>
-                    <li>Algorithms and Data Structures</li>
-                  </ul>
-                </p>
-            </p>
-                
-            <p class="sectionStyle2">
-                <h3>Certificate II in Electro-technology <span class="normalWeight">[2011]</span></h3>
-                <h3>Certificate II in Telecommunications <span class="normalWeight">[2011]</span></h3>
-                <h4 class="normalWeight italics">Northern Melbourne Insitute of TAFE</h4>
-            </p>
-
-            <p class="sectionStyle1">
-                <h3>Victorian Certificate of Education <span class="normalWeight">[2010]</span></h3>
-                <h4 class="normalWeight italics">Alphington Grammar School</h4>
-            </p>
-          </section>
+    <div id="expand" class="valign-wrapper">
+      <div class="row">
+        <div  class="col s1 offset-s3">
+          <i id="expand-icon" class="large material-icons">expand_more</i>
+        </div> 
       </div>
     </div>
 
-    <script type="text/javascript" src="scripts/nav.js" ></script>
+    <footer>
+      <a id="github-button" href="https://github.com/A-nthonyMai">GitHub</a>
+      <a id="linkedin-button" href="https://LinkedIn.com/in/A-nthonyMai">LinkedIn</a>
+    </footer>
+
+    <script type="text/javascript" src="js/nav.js" ></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>

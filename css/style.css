@@ -1,0 +1,68 @@
+/*
+	CSS file for AnthonyMai.me
+	Created by: Anthony Mai
+*/
+
+header {
+	height: calc(100vh - 175px);
+}
+
+#title {
+	margin-top: 75px;
+}
+
+#expand {
+	height: 175px;
+}
+
+#expand-icon {
+	color: black;
+	font-size: 6em;
+	animation-name: expand-animation;
+	animation-duration: 700ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes expand-animation {
+	0% { font-size: 6.1em; }
+
+	10% { font-size: 6.2em; }
+
+	20% { font-size: 6.3em; }
+
+	30% { font-size: 6.4em; }
+
+	40% { font-size: 6.5em; }
+
+	50% { font-size: 6.6em; }
+
+	60% { font-size: 6.5em; }
+
+	70% { font-size: 6.4em; }
+
+	80% { font-size: 6.3em; }
+
+	90% { font-size: 6.2em; }
+
+	100% { font-size: 6.1em; }
+}
+
+#name {
+	display: absolute !important;
+}
+
+nav a {
+	color: black;
+	margin-right: 10px;
+}
+
+.name {
+	font-size: 1.6em;
+	color: ;
+	font-family: sans-serif;
+}
+
+#resume {
+	min-height: 100vh;
+}
