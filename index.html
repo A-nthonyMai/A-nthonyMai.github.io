@@ -1,79 +1,62 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
-
-    <link rel="stylesheet" href="css/jBox.css"/>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css"/>
 
     <title>Anthony Mai | Portfolio</title>
   </head>
   <body>
     <div id="wrapper">
       <nav id="nav">
-        <a id="about" href="#about" class="fas fa-home" data-toggle="tooltip" data-placement="top" title="About Me"></a>
-        <a id="resume" href="https://github.com/A-nthonyMai/A-nthonyMai.github.io/blob/master/Anthony%20Mai%20-%20Resume.pdf?raw=" class="fas fa-file" data-toggle="tooltip" data-placement="top" title="Resume"></a>
-        <a id="github" href="https://github.com/A-nthonyMai" class="fab fa-github" data-toggle="tooltip" data-placement="top" title="GitHub"></a>
-        <a id="linkedin" href="https://LinkedIn.com/in/A-nthonyMai" class="fab fa-linkedin-in" data-toggle="tooltip" data-placement="top" title="LinkedIn"></a>
-        <a id="email" href="mailto:anthony.mai@hotmail.com" class="fas fa-envelope active" data-toggle="tooltip" data-placement="top" title="Contact Me"></a>
+        <a id="about-button" href="#about">Home</a>
+        <a id="resume-button" href="#resume">Resume</a>
+        <a id="github-button" href="https://github.com/A-nthonyMai">GitHub</a>
+        <a id="linkedin-button" href="https://LinkedIn.com/in/A-nthonyMai">LinkedIn</a>
+        <a id="email-button" href="mailto:anthony.mai@hotmail.com">Contact Me</a>
       </nav>
 
-      <section id="about">
-      </section>
+      <div id="about">
+        <p id="aboutMe">
+          Hi, I'm <span class="name">Anthony Mai</span>. Software developer and recent Computer Science graduate from Melbourne, Australia.
+        </p>
+      </div>
 
-      <section id="about">
-      </section>
+      <div id="resume">
+          <section id="education">
+            <h2 class="line-bottom">EDUCATION</h2>
+
+            <p class="sectionStyle1">
+                <h3>Bachelor of Computer Science <span class="normalWeight">[Feb 2014 - Nov 2017]</span></h3>
+                <h4 class="normalWeight italics">Swinburne University of Technology</h4>
+                <p class="sectionStyle1">
+                  Key Study Areas:
+                  <ul>
+                    <li>Programming Languages and Methodology</li>
+                    <li>Software and Web Development</li>
+                    <li>Software Project Management</li>
+                    <li>Database Systems and Implementations</li>
+                    <li>Algorithms and Data Structures</li>
+                  </ul>
+                </p>
+            </p>
+                
+            <p class="sectionStyle2">
+                <h3>Certificate II in Electro-technology <span class="normalWeight">[2011]</span></h3>
+                <h3>Certificate II in Telecommunications <span class="normalWeight">[2011]</span></h3>
+                <h4 class="normalWeight italics">Northern Melbourne Insitute of TAFE</h4>
+            </p>
+
+            <p class="sectionStyle1">
+                <h3>Victorian Certificate of Education <span class="normalWeight">[2010]</span></h3>
+                <h4 class="normalWeight italics">Alphington Grammar School</h4>
+            </p>
+          </section>
+      </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script>
-        // Highlight navigation button corresponding to current page
-      function setCurrentPage() {
-        var pageName = window.location.hash.substr(1);
-
-        if (pageName == "")
-        {
-          pageName = "about";
-        }
-        
-        document.getElementById(pageName).classList.add("currentPage");
-
-        var navButtons = document.getElementById("nav").getElementsByTagName("a");
-        for (var i = 0; i < navButtons.length; i++)
-        {
-          if (navButtons[i].classList.contains("currentPage") && navButtons[i].id != pageName)
-          {
-            navButtons[i].classList.remove("currentPage");
-          }
-        }
-      }
-
-        // Tooltip for navigation buttons
-      $(document).ready(function(){
-          setCurrentPage(this);
-
-          $('[data-toggle="tooltip"]').tooltip({
-            trigger : 'hover'
-          });
-      });
-
-      $(window).bind('hashchange', function() {
-        setCurrentPage();
-      });
-    </script>
-
-    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    <script type="text/javascript" src="scripts/nav.js" ></script>
   </body>
 </html>
