@@ -3,6 +3,11 @@
 	Created by: Anthony Mai
 */
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 header {
 	height: calc(100vh - 175px);
 }
@@ -48,21 +53,19 @@ header {
 	100% { font-size: 6.1em; }
 }
 
-#name {
-	display: absolute !important;
-}
-
-nav a {
-	color: black;
-	margin-right: 10px;
-}
-
-.name {
-	font-size: 1.6em;
-	color: ;
-	font-family: sans-serif;
-}
-
 #resume {
 	min-height: 100vh;
+}
+
+#education, #industry, #skills {
+	margin-top: 25px;
+	font-size: 1.5em;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+ul li {
+	text-indent: 25px;
 }
