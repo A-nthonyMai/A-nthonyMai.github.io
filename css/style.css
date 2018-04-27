@@ -69,3 +69,12 @@ header {
 ul li {
 	text-indent: 25px;
 }
+
+footer {
+	text-align: center;
+	background-color: #dee8eb !important;
+}
+
+footer a {
+	color: grey;
+}
