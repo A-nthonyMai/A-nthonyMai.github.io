@@ -85,4 +85,5 @@ footer {
 footer a {
 	color: white;
 	padding-left: 15px;
+	font-size: 1.5em !important;
 }
