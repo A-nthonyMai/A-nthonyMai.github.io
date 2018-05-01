@@ -53,6 +53,18 @@ header {
 	100% { font-size: 6.1em; }
 }
 
+.listStyle li {
+	margin-top: 15px;
+	margin-left: 20px;
+	font-size: 0.9em;
+}
+
+.listStyle li {
+	margin-top: 15px;
+	margin-left: 20px;
+	font-size: 0.9em;
+}
+
 #resume {
 	min-height: 100vh;
 }
@@ -66,15 +78,12 @@ header {
 	font-weight: bold;
 }
 
-ul li {
-	text-indent: 25px;
-}
-
 footer {
 	text-align: center;
-	background-color: #dee8eb !important;
+	background-color: #283e4a !important;
 }
 
 footer a {
-	color: grey;
+	color: white;
+	padding-left: 15px;
 }

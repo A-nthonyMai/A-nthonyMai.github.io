@@ -16,7 +16,8 @@
     <!-- Style.css -->
     <link rel="stylesheet" href="css/style.css" media="screen,projection"/>
 
-
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>Anthony Mai | Portfolio</title>
   </head>
@@ -36,7 +37,7 @@
     <div id="expand" class="valign-wrapper">
       <div class="row">
         <div  class="col s1 offset-s3">
-          <a class="show-on-medium-and-up" href="#resume"><i id="expand-icon" class="large material-icons">expand_more</i></a>
+          <i id="expand-icon" class="large material-icons tooltipped" data-position="bottom" data-tooltip="Scroll for more!">expand_more</i>
         </div> 
       </div>
     </div>
@@ -48,7 +49,7 @@
         <div id="education">
           <div class="row">
             <div class="col s4 right-align">
-              <img class="responsive-img z-depth-4" src="images/swinburne-logo.png" alt="Swinburne Logo"/>
+              <img class="responsive-img" src="images/swinburne-logo.png" alt="Swinburne Logo"/>
             </div>
 
             <div class="col s8">
@@ -57,18 +58,17 @@
                 <br>
                 Swinburne University of Technology
               </p>
-              
-              <p class="flow-text">
-                <br>
-                Key Study Areas:
-                <ul>
-                  <li>- Programming Languages and Methodology</li>
-                  <li>- Software and Web Development</li>
-                  <li>- Software Project Management</li>
-                  <li>- Database Systems and Implementations</li>
-                  <li>- Algorithms and Data Structures</li>
-                </ul>
-              </p>
+              <br>
+
+              <h5>Key Study Areas:</h5>
+              <ul class="flow-text listStyle">
+                <li>Programming Languages and Methodology</li>
+                <li>Software and Web Development</li>
+                <li>Software Project Management</li>
+                <li>Database Systems and Implementations</li>
+                <li>Algorithms and Data Structures</li>
+              </ul>
+
               <br>
             </div>
           </div>
@@ -121,18 +121,12 @@
                 <br>
                 Synchronised Software Pty Ltd
               </p>
-              
-              <p class="flow-text">
-                <br>
-                Responsibilities and Achievements:
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-              </p>
+              <br>
+              <ul class="flow-text listStyle">
+                <li>Developed new modules and updates for Syncsoft's Capital registry administration system</li>
+                <li>Actively debugged and resolved defects raised by clients or the QA team</li>
+                <li>Awarded <span class="bold">"Star of the Month"</span> by the client for contributions made towards the project</li>
+              </ul>
               <br>
             </div>
           </div>
@@ -140,46 +134,43 @@
       </section>
 
       <section>
-        <h2 class="center-align">Computer Skills</h2>
+        <h2 class="center-align">Languages</h2>
         <div class="divider"></div>
         <div id="skills">
           <div class="row">
-            <h3>Languages</h3>
-
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/C logo.png" title="C"/>
             </div>
 
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/C++ logo.png" title="C++"/>
             </div>
 
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/CS logo.png" title="C#"/>
             </div>
 
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/Obj-C logo.png" title="Objective C"/>
             </div>
 
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/Pascal-logo.png" title="Pascal"/>
             </div>
 
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/Python logo.png" title="Python"/>
             </div>
 
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/HTML5 logo.png" title="HTML5"/>
             </div>
 
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/CSS3 logo.png" title="PHP"/>
             </div>
 
-
-            <div class="col s2">
+            <div class="col s1">
               <img class="responsive-img" src="images/PHP logo.png"/>
             </div>
           </div>
@@ -194,5 +185,11 @@
     </footer>
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('.tooltipped').tooltip();
+      });
+    </script>
   </body>
 </html>
