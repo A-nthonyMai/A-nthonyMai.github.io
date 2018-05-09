@@ -8,7 +8,7 @@
 	padding: 0;
 }
 
-header {
+#aboutMe {
 	height: calc(100vh - 175px);
 }
 
@@ -16,41 +16,56 @@ header {
 	margin-top: 75px;
 }
 
-#expand {
+#console {
 	height: 175px;
+	color: white;
+	font-size: 20px;
+	background-color: #272822;
 }
 
-#expand-icon {
-	color: black;
-	font-size: 6em;
-	animation-name: expand-animation;
-	animation-duration: 700ms;
+#showConsoleButton {
+	height: 0px;
+}
+
+#consoleCommands {
+	max-height: 145px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+#consoleCommands, #consoleCommand {
+	margin-left: 5px;
+}
+
+#consoleCommand {
+	background-color: #272822;
+	color: white;
+    border: 0;
+    text-shadow: 0px 0px 0px #ffff;
+    outline: none;
+}
+
+.transparent {
+	color: transparent;
+}
+
+.blink {
+	animation-name: blink_animation;
+	animation-duration: 900ms;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
-@keyframes expand-animation {
-	0% { font-size: 6.1em; }
+@keyframes blink_animation {
+	0% { opacity: 1; }
 
-	10% { font-size: 6.2em; }
+	25% { opacity: 0.75; }
 
-	20% { font-size: 6.3em; }
+	50% { opacity: 0.5; }
 
-	30% { font-size: 6.4em; }
+	75% { opacity: 0.25; }
 
-	40% { font-size: 6.5em; }
-
-	50% { font-size: 6.6em; }
-
-	60% { font-size: 6.5em; }
-
-	70% { font-size: 6.4em; }
-
-	80% { font-size: 6.3em; }
-
-	90% { font-size: 6.2em; }
-
-	100% { font-size: 6.1em; }
+	100% { opacity: 0; }
 }
 
 .studyList li {
@@ -66,6 +81,7 @@ header {
 
 #resume {
 	min-height: 100vh;
+	display: none;
 }
 
 #education, #industry, #skills {
@@ -80,6 +96,7 @@ header {
 footer {
 	text-align: center;
 	background-color: #283e4a !important;
+	display: none;
 }
 
 footer a {
