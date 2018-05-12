@@ -54,7 +54,7 @@ header {
     	typing 3.5s steps(40, end);
 	}
 
-	.typewriter h1 {
+	.typewriter h2 {
 		overflow: hidden;
 		visibility: visible;
 		border-right: .15em solid transparent;
