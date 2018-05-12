@@ -21,22 +21,22 @@
   <body>
     <header class="valign-wrapper">
       <div id="aboutMe" class="row z-depth-5">
-        <div class="col s12 center-align">
-          <div class="col s12 center-align typewriter hide-on-small-only">
-            <h4 id="intro">Hi, I'm</h4>
+        <div class="col s12 m12 center-align">
+          <div id="intro">
+            <h4>Hi, I'm</h4>
           </div>
 
-          <div id="photo" class="col s6 m12 center-align">
+          <div id="photo" class="col s6 offset-s3 m12 center-align">
             <img id="myPhoto" class="circle responsive-img z-depth-5" src="images/me.png">
           </div>
     
-          <div class="col s12 center-align typewriter hide-on-small-only">
-            <h1 id="name">Anthony Mai</h1>
+          <div id="name" class="col s12 center-align">
+            <h1 id="myName">Anthony Mai</h1>
           </div>
         </div>
         
-        <div class="col s12 center-align typewriter hide-on-small-only">
-          <h3 id="title">Software and Web Developer</h3>
+        <div id="title" class="col s12 center-align">
+          <h3 id="myTitle">Software and Web Developer</h3>
         </div>
       </div>
     </header>
@@ -201,6 +201,14 @@
     <script>
       $(document).ready(function() {
         $('.tooltipped').tooltip();
+      });
+
+      $(window).on('resize', function() {
+        if($(window).width() > 700) {
+          $('#intro').addClass('typewriter');
+          $('#name').addClass('typewriter');
+          $('#title').addClass('typewriter');
+        }
       });
     </script>
   </body>

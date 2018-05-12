@@ -21,71 +21,72 @@ header {
 	color: black;
 	background-color: white !important;
 	margin-top: 100px;
-	height: auto;
-	width: auto;
 	border-radius: 15px;
 }
 
 #aboutMe * {
-	margin-top: 30px;
+	margin-top: 3%;
 }
 
-#title {
-	margin-top: 75px;
-	visibility: hidden;
-}
-
-#intro {
-	display: inline-block;
-}
-
-#name {
-	visibility: hidden;
+#myTitle {
+	margin-top: 1%;
 }
 
 /* Typewriter Effect */
 /* Source: Geoff Graham - https://css-tricks.com/snippets/css/typewriter-effect/ */
-.typewriter h4 {
-  overflow: hidden;
-  border-right: .15em solid transparent;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .1em;
-  animation: 
-    typing 3.5s steps(40, end);
+
+@media (min-width: 700px) {
+	#myName {
+		visibility: hidden;
+	}
+
+	#myTitle {
+		visibility: hidden;
+	}
+
+	.typewriter h4 {
+ 		overflow: hidden;
+ 		border-right: .15em solid transparent;
+ 		white-space: nowrap;
+ 		margin: 0 auto;
+ 		letter-spacing: .1em;
+ 		animation: 
+    	typing 3.5s steps(40, end);
+	}
+
+	.typewriter h1 {
+		overflow: hidden;
+		visibility: visible;
+		border-right: .15em solid transparent;
+		white-space: nowrap;
+		margin: 0 auto;
+		letter-spacing: .1em;
+		animation: 
+		  typing 3s steps(40, end);
+		animation-delay: 0.5s;
+		animation-fill-mode:forwards;
+	}
+	
+	.typewriter h3 {
+		overflow: hidden;
+		visibility: visible;
+		border-right: .15em solid transparent;
+		white-space: nowrap;
+		margin: 0 auto;
+		letter-spacing: .1em;
+		animation: 
+		  typing 2s steps(40, end);
+		animation-delay: 2s;
+		animation-fill-mode:forwards;
+	}
+	
+	@keyframes typing {
+		from { width: 1% }
+		to { width: 100% }
+		100% { visibility: visible }
+	}
 }
 
-.typewriter h1 {
-  overflow: hidden;
-  visibility: visible;
-  border-right: .15em solid transparent;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .1em;
-  animation: 
-    typing 3s steps(40, end);
-  animation-delay: 0.5s;
-  animation-fill-mode:forwards;
-}
-
-.typewriter h3 {
-  overflow: hidden;
-  visibility: visible;
-  border-right: .15em solid transparent;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .1em;
-  animation: 
-    typing 2s steps(40, end);
-  animation-delay: 2s;
-  animation-fill-mode:forwards;
-}
-
-@keyframes typing {
-  from { width: 0% }
-  to { width: 100% }
-  100% { visibility: visible }
-}
 
 #expand {
 	height: 175px;
