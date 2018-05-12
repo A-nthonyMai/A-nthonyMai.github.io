@@ -10,7 +10,11 @@
 
 header {
 	height: calc(100vh - 175px);
+}
+
+#introduction {
 	background: url("../images/header-bg.svg") no-repeat center center fixed;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -25,7 +29,8 @@ header {
 }
 
 #aboutMe * {
-	margin-top: 3%;
+	margin-top: 2%;
+	margin-bottom: 1%;
 }
 
 #myTitle {
@@ -62,7 +67,7 @@ header {
 		margin: 0 auto;
 		letter-spacing: .1em;
 		animation: 
-		  typing 3s steps(40, end);
+		  typing 2s steps(40, end);
 		animation-delay: 0.5s;
 		animation-fill-mode:forwards;
 	}
@@ -75,8 +80,8 @@ header {
 		margin: 0 auto;
 		letter-spacing: .1em;
 		animation: 
-		  typing 2s steps(40, end);
-		animation-delay: 2s;
+		  typing 1.5s steps(40, end);
+		animation-delay: 1.5s;
 		animation-fill-mode:forwards;
 	}
 	
@@ -87,14 +92,8 @@ header {
 	}
 }
 
-
 #expand {
 	height: 175px;
-	background: url("../images/header-bg.svg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
 }
 
 #expand-icon {
