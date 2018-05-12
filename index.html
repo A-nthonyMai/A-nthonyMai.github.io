@@ -201,15 +201,20 @@
     <script>
       $(document).ready(function() {
         $('.tooltipped').tooltip();
+        initTypewriterAnim();
       });
 
       $(window).on('resize', function() {
-        if($(window).width() > 700) {
+        initTypewriterAnim();
+      });
+
+      function initTypewriterAnim() {
+        if($(window).width() >= 700) {
           $('#intro').addClass('typewriter');
           $('#name').addClass('typewriter');
           $('#title').addClass('typewriter');
         }
-      });
+      }
     </script>
   </body>
 </html>
