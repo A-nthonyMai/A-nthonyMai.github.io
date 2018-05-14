@@ -8,6 +8,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 header {
 	height: calc(100vh - 175px);
 }
@@ -24,7 +28,6 @@ header {
 #aboutMe {
 	color: black;
 	background-color: white !important;
-	margin-top: 100px;
 	border-radius: 15px;
 }
 
@@ -35,6 +38,24 @@ header {
 
 #myTitle {
 	margin-top: 1%;
+}
+
+#contactModal {
+	height: 60vh;
+}
+
+#modal-close {
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+label {
+	font-size: 1.5em !important;
+}
+
+input, textarea {
+	margin-top: 10px !important;
 }
 
 /* Typewriter Effect */
@@ -90,6 +111,14 @@ header {
 		to { width: 100% }
 		100% { visibility: visible }
 	}
+}
+
+#contactForm {
+	margin-top: 5%;
+}
+
+::placeholder {
+	opacity: 0.9;
 }
 
 #expand {
@@ -155,13 +184,5 @@ header {
 
 footer {
 	text-align: center;
-	background-color: #283e4a !important;
-}
-
-footer a {
-	color: white;
-	text-shadow: 1px 1px #000;
-	font-weight: bold;
-	padding-left: 15px;
-	font-size: 2em !important;
+	background-color: white !important;
 }
