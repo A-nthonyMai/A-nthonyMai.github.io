@@ -7,6 +7,9 @@
     <!-- Google Icon Font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <!-- Materialize.css -->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
@@ -51,12 +54,44 @@
               <h3 id="myTitle">Software and Web Developer</h3>
             </div>
           </div>
+
+          <div id="contact" class="center-align">
+            <a class="waves-effect waves-light btn-large blue modal-trigger" href="#contactModal"><i class="material-icons right">group</i>Get In Touch!</a>
+            <div id="contactModal" class="modal">
+              <div class="modal-content">
+                <button id="modal-close" class="modal-close btn-flat"><i class="material-icons large">close</i></button>
+                <div class="contactButtons"></div>
+
+                <div id="contactForm" class="row">
+                  <form class="col s12" action="https://formspree.io/anthony.mai@hotmail.com" method="POST">
+                    <div class="row valign-wrapper">
+                      <div class="input-field col s6">
+                        <input type="text" name="name" placeholder="Your name" class="validate">
+                        <label for="name">Name</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input type="email" name="email" placeholder="Your email" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <textarea name="message" class="materialize-textarea" placeholder="Your message"></textarea>
+                        <label for="message">Message</label>
+                      </div>
+                    </div>
+                    <button id="sendButton" class="waves-effect waves-light btn-large" type="submit">Send Message!</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
       <div id="expand" class="row valign-wrapper">
         <div class="col s10 offset-s1 center-align">
-          <i id="expand-icon" class="large material-icons tooltipped" data-position="top" data-tooltip="Scroll for more!">    expand_more</i>
+          <a id="expandButton" href="#resume"><i id="expand-icon" class="large material-icons">expand_more</i></a>
         </div>
       </div>
     </section>
@@ -145,7 +180,8 @@
               <br>
               <ul class="flow-text industryList">
                 <li>Involved in the design, implementation and support of functional changes to Syncsoft's Capital registry administration system as part of a client project</li>
-                <li>Actively debugged and resolved defects raised by clients or the QA team</li>
+                <br/>
+                <span class="bold">Achievements:</span>
                 <li>Awarded <span class="bold">"Star of the Month"</span> by the client for contributions made towards the project</li>
               </ul>
               <br>
@@ -180,10 +216,6 @@
             </div>
 
             <div class="col m1 s3">
-              <img class="responsive-img" src="images/Python logo.png" title="Python"/>
-            </div>
-
-            <div class="col m1 s3">
               <img class="responsive-img" src="images/HTML5 logo.png" title="HTML5"/>
             </div>
 
@@ -203,11 +235,7 @@
       </section>
     </div>
 
-    <footer class="page-footer">
-      <a href="https://drive.google.com/file/d/1njgfsXFLVvcMBohvLKv45HQ8vasijeG7/view?usp=sharing">Resume</a>
-      <a href="https://www.linkedin.com/in/a-nthonymai/">LinkedIn</a>
-      <a href="https://github.com/A-nthonyMai">GitHub</a>
-      <a href="mailto:anthony.mai@hotmail.com">Email</a>
+    <footer class="contactButtons page-footer">
     </footer>
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -216,6 +244,8 @@
       $(document).ready(function() {
         $('.tooltipped').tooltip();
         initTypewriterAnim();
+        $('.modal').modal();
+        $(".contactButtons").load("contactButtons.html");
       });
 
       $(window).on('resize', function() {
